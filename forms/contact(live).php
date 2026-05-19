@@ -67,7 +67,7 @@ if ($stmt->execute()) {
         <p>Our team is currently reviewing your message, and we will get back to you shortly. If you need any further assistance in the meantime, feel free to reply to this email.</p>
         <p>Best regards,</p>
         <p><strong>Hidayat Ul Quran</strong></p>
-        <p><strong>Phone/Whatapp:</strong> +92 3342730589</p>
+        <p><strong>Phone/Whatapp:</strong> +92 336 5398542</p>
         <p>Follow us on social media:</p>
         <p>
             <a href='https://www.youtube.com/channel/UCDiUcDx4tqPCqvENApO9Gvg'>

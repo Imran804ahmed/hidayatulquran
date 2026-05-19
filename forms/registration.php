@@ -82,7 +82,7 @@ if ($stmt->execute()) {
         <p>If you have any questions, feel free to reach out to us.</p>
         <p>Best regards,</p>
         <p><strong>Hidayat Ul Quran</strong></p>
-        <p><strong>Phone/WhatsApp:</strong> +92 3342730589</p>
+        <p><strong>Phone/WhatsApp:</strong> +92 336 5398542</p>
         <p>Follow us on social media:</p>
         <p>
             <a href='https://www.youtube.com/channel/UCDiUcDx4tqPCqvENApO9Gvg'>
