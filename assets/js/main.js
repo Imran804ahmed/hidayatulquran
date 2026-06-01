@@ -110,19 +110,81 @@
   /**
    * Mobile nav toggle
    */
+  const navbar = select('#navbar')
+  const mobileNavToggle = select('.mobile-nav-toggle')
+  const navbarParent = navbar ? navbar.parentElement : null
+  const navbarNextSibling = navbar ? navbar.nextElementSibling : null
+
+  const restoreNavbarPosition = () => {
+    if (!navbar || !navbarParent || navbar.parentElement === navbarParent) return
+
+    navbarParent.insertBefore(navbar, navbarNextSibling)
+  }
+
+  const resetMobileDropdowns = () => {
+    select('.navbar .dropdown > a', true).forEach(dropdownToggle => {
+      dropdownToggle.setAttribute('aria-expanded', 'false')
+      dropdownToggle.classList.remove('expanded')
+      if (dropdownToggle.nextElementSibling) {
+        dropdownToggle.nextElementSibling.classList.remove('dropdown-active')
+      }
+    })
+  }
+
+  const closeMobileNav = () => {
+    if (!navbar || !navbar.classList.contains('navbar-mobile')) return
+
+    navbar.classList.remove('navbar-mobile')
+    document.body.classList.remove('mobile-nav-open')
+    mobileNavToggle.classList.add('bi-list')
+    mobileNavToggle.classList.remove('bi-x')
+    mobileNavToggle.setAttribute('aria-expanded', 'false')
+    mobileNavToggle.setAttribute('aria-label', 'Open navigation menu')
+    resetMobileDropdowns()
+    restoreNavbarPosition()
+  }
+
   on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
+    e.preventDefault()
+    const isOpening = !navbar.classList.contains('navbar-mobile')
+
+    if (isOpening) {
+      document.body.appendChild(navbar)
+      navbar.classList.add('navbar-mobile')
+      document.body.classList.add('mobile-nav-open')
+      this.classList.remove('bi-list')
+      this.classList.add('bi-x')
+      this.setAttribute('aria-expanded', 'true')
+      this.setAttribute('aria-label', 'Close navigation menu')
+    } else {
+      closeMobileNav()
+    }
   })
 
   /**
    * Mobile nav dropdowns activate
    */
   on('click', '.navbar .dropdown > a', function(e) {
-    if (select('#navbar').classList.contains('navbar-mobile')) {
+    if (navbar.classList.contains('navbar-mobile')) {
       e.preventDefault()
       this.nextElementSibling.classList.toggle('dropdown-active')
+      // Toggle aria-expanded for accessibility
+      const isExpanded = this.getAttribute('aria-expanded') === 'true'
+      this.setAttribute('aria-expanded', !isExpanded)
+      this.classList.toggle('expanded')
+    }
+  }, true)
+
+  // Add keyboard accessibility for dropdowns
+  on('keydown', '.navbar .dropdown > a', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') {
+      if (navbar.classList.contains('navbar-mobile')) {
+        e.preventDefault()
+        this.nextElementSibling.classList.toggle('dropdown-active')
+        const isExpanded = this.getAttribute('aria-expanded') === 'true'
+        this.setAttribute('aria-expanded', !isExpanded)
+        this.classList.toggle('expanded')
+      }
     }
   }, true)
 
@@ -130,19 +192,49 @@
    * Scrool with ofset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
+    if (this.hash && select(this.hash)) {
       e.preventDefault()
 
-      let navbar = select('#navbar')
       if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
+        closeMobileNav()
       }
       scrollto(this.hash)
     }
   }, true)
+
+  /**
+   * Close the mobile drawer after following submenu and page links.
+   */
+  on('click', '.navbar a', function(e) {
+    if (!navbar.classList.contains('navbar-mobile') || this.parentElement.classList.contains('dropdown')) return
+
+    if (this.hash && select(this.hash)) {
+      e.preventDefault()
+      closeMobileNav()
+      scrollto(this.hash)
+      return
+    }
+
+    closeMobileNav()
+  }, true)
+
+  document.addEventListener('click', e => {
+    if (navbar.classList.contains('navbar-mobile') && e.target === navbar) {
+      closeMobileNav()
+    }
+  })
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      closeMobileNav()
+    }
+  })
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 991) {
+      closeMobileNav()
+    }
+  })
 
   /**
    * Scroll with ofset on page load with hash links in the url

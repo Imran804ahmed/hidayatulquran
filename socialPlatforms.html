@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Registration - hidayatulquran</title>
+  <title>Social Platforms - HidayatulQuran Academy</title>
   <meta name="description"
     content="Hidayatul Quran is an online Quran academy offering Quranic education to students worldwide, including the USA, UK, KSA, Germany, Canada, and AED. Learn Quran, Tajweed, and Islamic studies from qualified teachers at your convenience.">
 
@@ -30,7 +30,7 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css?v=20260530-12" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: FlexStart - v1.4.0
@@ -43,20 +43,40 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top" style="padding: 15px; background-color: #fefffe;">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-center">
-
-      <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-        <img src="assets/img/hidayatulquran1.png" alt="">
-        <span style="font-size: 20px; margin-left: 10px;">Hidaya Tul Quran</span>
+  <header id="header" class="header fixed-top" role="banner">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center" aria-label="HidayatulQuran Academy home">
+        <img src="assets/img/hidayatulquran1.png" alt="HidayatulQuran Academy logo">
+        <span>HidayatulQuran</span>
       </a>
-
+      <nav id="navbar" class="navbar" aria-label="Primary navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#QuranCourses">Courses</a></li>
+          <li><a href="index.html#MonthlyFee">Monthly Fee</a></li>
+          <li class="dropdown"><a href="#" aria-haspopup="true" aria-expanded="false"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="index.html#EnrollmentProcess">Enrollment Process</a></li>
+              <li class="dropdown"><a href="#" aria-haspopup="true" aria-expanded="false"><span>Specialities</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="index.html#features">Why Choose</a></li>
+                  <li><a href="index.html#OurTeachingMethod">Our Teaching Method</a></li>
+                  <li><a href="index.html#EmpoweringStudents">Empowering Students</a></li>
+                </ul>
+              </li>
+              <li><a href="faq.html">F.A.Q</a></li>
+            </ul>
+          </li>
+          <li><a href="socialPlatforms.html">Social Platform</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <button class="mobile-nav-toggle bi bi-list" type="button" aria-label="Open navigation menu"
+          aria-controls="navbar" aria-expanded="false"></button>
+      </nav>
+      <a href="registration.html" class="header-register">Register Now</a>
     </div>
   </header>
-  <!-- End Header -->
-
-
-  <i class="bi bi-list mobile-nav-toggle" style="display: none;"></i>
 
   <main id="main">
 
@@ -148,8 +168,23 @@
 
 
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+ <div class="back-to-top d-flex align-items-center"
+    style="padding: 30px; flex-direction: column; justify-content: flex-end; background-color: transparent; padding: 0px;">
+
+    <div
+      style="background-color: #169344; margin-bottom: 15px; padding: 10px; border-top-right-radius: 10px; border-top-left-radius: 0px;">
+      <a href="https://wa.me/923365398542" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+      </a>
+    </div>
+
+    <div
+      style="background-color: #3b51e0; margin-bottom: 0px; padding: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 0px; ">
+      <a href="#">
+        <i class="bi bi-arrow-up-short"></i>
+      </a>
+    </div>
+  </div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
@@ -161,7 +196,7 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=20260530-4"></script>
 
 </body>
 

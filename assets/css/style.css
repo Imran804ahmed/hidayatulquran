@@ -2464,3 +2464,1643 @@ section {
 }
 
 /*--------------------------------------------------------------
+# HidayatulQuran production responsive polish
+--------------------------------------------------------------*/
+:root {
+  --hq-navy: #082c4c;
+  --hq-blue: #0d4f8b;
+  --hq-green: #136f43;
+  --hq-gold: #d7a53f;
+  --hq-gold-dark: #a66f14;
+  --hq-ink: #263238;
+  --hq-muted: #5f6f7a;
+  --hq-surface: #f7faf8;
+  --hq-border: #e3eadf;
+  --hq-shadow: 0 16px 40px rgba(8, 44, 76, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: var(--hq-ink);
+  line-height: 1.65;
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+button,
+input,
+textarea {
+  outline-color: var(--hq-gold);
+}
+
+section {
+  padding: 80px 0;
+}
+
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-header {
+  max-width: 760px;
+  margin: 0 auto;
+  padding-bottom: 34px;
+}
+
+.section-header h2,
+.section-header h3 {
+  color: var(--hq-gold-dark) !important;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.section-header p {
+  color: var(--hq-navy);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.18;
+}
+
+.header {
+  padding: 14px 0;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 28px rgba(8, 44, 76, 0.08);
+}
+
+.header.header-scrolled {
+  padding: 10px 0;
+}
+
+.header .logo {
+  min-width: 0;
+}
+
+.header .logo img {
+  max-height: 48px;
+}
+
+.header .logo span {
+  color: var(--hq-navy);
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.navbar a,
+.navbar a:focus {
+  color: var(--hq-navy);
+  padding: 10px 0 10px 22px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: var(--hq-gold-dark);
+}
+
+.navbar .dropdown ul {
+  border: 1px solid var(--hq-border);
+  box-shadow: var(--hq-shadow);
+}
+
+.mobile-nav-toggle {
+  border: 0;
+  background: transparent;
+  color: var(--hq-navy);
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero {
+  min-height: 100vh;
+  height: auto;
+  padding: 140px 0 80px;
+  background:
+    linear-gradient(110deg, rgba(247, 250, 248, 0.97) 0%, rgba(247, 250, 248, 0.9) 48%, rgba(226, 244, 235, 0.82) 100%),
+    url(../img/hero-bg.png) center / cover no-repeat;
+}
+
+.hero .row {
+  align-items: center;
+  row-gap: 36px;
+}
+
+.hero h1 {
+  color: var(--hq-navy);
+  font-size: clamp(2.35rem, 5vw, 4.8rem);
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.hero-eyebrow {
+  color: var(--hq-gold-dark);
+  font-family: "Nunito", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.hero-lead,
+.hero-subtitle {
+  max-width: 640px;
+  margin: 18px 0 0;
+}
+
+.hero-lead {
+  color: var(--hq-muted);
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+}
+
+.hero-subtitle {
+  color: var(--hq-navy);
+  font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+  font-weight: 800;
+}
+
+.hero .btn-get-started,
+.about .btn-read-more,
+.courses .btn-extra-benefit,
+.contact .php-email-form button[type="submit"] {
+  background: var(--hq-green);
+  border-radius: 6px;
+  box-shadow: 0 10px 26px rgba(19, 111, 67, 0.24);
+}
+
+.hero .btn-get-started:hover,
+.about .btn-read-more:hover,
+.courses .btn-extra-benefit:hover,
+.contact .php-email-form button[type="submit"]:hover {
+  background: var(--hq-navy);
+  color: #ffffff;
+}
+
+.hero .hero-img {
+  text-align: center;
+}
+
+.hero .hero-img img {
+  width: min(430px, 86vw);
+  filter: drop-shadow(0 22px 32px rgba(8, 44, 76, 0.16));
+}
+
+.course-card {
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 100% !important;
+  padding: 18px !important;
+  background: #ffffff !important;
+  border: 1px solid var(--hq-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 14px 34px rgba(8, 44, 76, 0.08);
+}
+
+.course-card-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.courses .course-card-title {
+  margin: 18px 0 10px;
+  color: #000000;
+  font-family: "Croissant One", "Nunito", sans-serif;
+  font-size: 1.28rem;
+  line-height: 1.3;
+  text-transform: none;
+}
+
+.course-card-description {
+  flex-grow: 1;
+  color: var(--hq-ink);
+  margin: 0 0 18px;
+}
+
+.course-card-benefits {
+  display: none;
+  color: var(--hq-ink);
+  font-size: 0.92rem;
+  margin-bottom: 18px;
+}
+
+.course-card-benefits p {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.course-card-benefits ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.course-card-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: auto;
+}
+
+.course-card-actions>div {
+  display: flex;
+  min-width: 0;
+}
+
+.course-card-actions .btn-extra-benefit {
+  display: inline-flex;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.course-card-actions .btn-benefits {
+  background: var(--hq-gold-dark) !important;
+  box-shadow: 0 8px 22px rgba(166, 111, 20, 0.2) !important;
+}
+
+.course-card-actions .btn-explore {
+  background: var(--hq-blue) !important;
+  box-shadow: 0 8px 22px rgba(13, 79, 139, 0.2) !important;
+}
+
+.pricing .row.mb-5 .col-12 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.country-button {
+  width: auto !important;
+  min-width: 110px;
+  min-height: 44px;
+  margin: 0 !important;
+  border: 1px solid var(--hq-border) !important;
+  border-radius: 999px !important;
+  background: #ffffff !important;
+  color: var(--hq-navy) !important;
+}
+
+.country-button.active,
+.country-button:hover {
+  background: var(--hq-green) !important;
+  color: #ffffff !important;
+}
+
+.plan-card {
+  height: 100%;
+  padding: 0 0 30px !important;
+  overflow: hidden;
+  background: #ffffff !important;
+  border: 1px solid var(--hq-border) !important;
+  border-radius: 8px !important;
+  box-shadow: var(--hq-shadow) !important;
+  transform: none !important;
+}
+
+.pricing .box:hover,
+.plan-card:hover {
+  transform: translateY(-6px) !important;
+}
+
+.plan-package {
+  color: var(--hq-gold-dark) !important;
+  margin: 0;
+}
+
+.plan-title {
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.plan-price {
+  color: var(--hq-navy) !important;
+  font-size: clamp(2.2rem, 4vw, 3.4rem) !important;
+  line-height: 1;
+  margin: 0;
+}
+
+.btn-register {
+  background: var(--hq-green) !important;
+  border-radius: 999px !important;
+  min-height: 44px;
+}
+
+.btn-register:hover {
+  background: var(--hq-navy) !important;
+}
+
+.services .service-box,
+.features .feature-box,
+.contact .info-box,
+.contact .php-email-form,
+.testimonials .testimonial-item {
+  border: 1px solid var(--hq-border);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(8, 44, 76, 0.08);
+}
+
+.features .feature-icons {
+  margin-top: 70px;
+}
+
+.features .feature-icons .content .icon-box {
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.features .feature-icons .content .icon-box i {
+  flex: 0 0 auto;
+  color: var(--hq-green);
+}
+
+.contact .info-box {
+  height: 100%;
+  background: var(--hq-surface);
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+  border-radius: 6px;
+}
+
+.clients .clients-slider .swiper-slide img {
+  max-height: 72px;
+  object-fit: contain;
+}
+
+.back-to-top {
+  width: auto;
+  height: auto;
+  right: 16px;
+  bottom: 16px;
+}
+
+.back-to-top a {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1199px) {
+  .navbar a,
+  .navbar a:focus {
+    padding-left: 14px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  section {
+    padding: 64px 0;
+  }
+
+  .hero {
+    padding-top: 116px;
+    text-align: center;
+  }
+
+  .hero-lead,
+  .hero-subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero .hero-img {
+    margin-top: 18px;
+  }
+
+  .navbar-mobile {
+    background: rgba(8, 44, 76, 0.9);
+  }
+
+  .navbar-mobile ul {
+    top: 68px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 8px;
+  }
+
+  .navbar-mobile a {
+    padding: 14px 20px;
+    white-space: normal;
+  }
+
+  .navbar-mobile .dropdown ul {
+    margin: 0 16px 10px;
+    box-shadow: none;
+    border: 1px solid var(--hq-border);
+  }
+
+  .features .feature-icons,
+  .features .feture-tabs {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container,
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  section {
+    padding: 54px 0;
+  }
+
+  .header .logo img {
+    max-height: 40px;
+  }
+
+  .header .logo span {
+    max-width: 58vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero {
+    padding: 104px 0 56px;
+  }
+
+  .hero .btn-get-started {
+    width: 100%;
+    max-width: 280px;
+    padding: 15px 24px;
+  }
+
+  .course-card-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing .row.mb-5 .col-12 {
+    justify-content: stretch;
+  }
+
+  .country-button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  #clients {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .contact .php-email-form,
+  .contact .info-box {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .country-button {
+    flex-basis: 100%;
+  }
+
+  .section-header {
+    padding-bottom: 26px;
+  }
+
+  .section-header p {
+    font-size: 1.55rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# Enhanced Responsive Styles
+--------------------------------------------------------------*/
+
+/* Extra Small Devices (iPhone SE, older phones) */
+@media (max-width: 374px) {
+  .header .logo span {
+    font-size: 0.95rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero .btn-get-started {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .country-button {
+    font-size: 13px;
+    padding: 8px 12px;
+    min-width: 90px;
+  }
+}
+
+/* Tablet Landscape */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hero h1 {
+    font-size: 3.2rem;
+  }
+
+  .navbar a,
+  .navbar a:focus {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .course-card-title {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablet Portrait */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero {
+    padding: 120px 0 60px;
+  }
+
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero .hero-img img {
+    width: 70%;
+  }
+
+  .features .feature-box {
+    padding: 20px;
+  }
+
+  .features .feture-tabs h3,
+  .features .feature-icons h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact .info-box {
+    margin-bottom: 20px;
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .hero .hero-img img {
+    width: 480px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Accessibility Improvements
+--------------------------------------------------------------*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--hq-gold);
+  outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--hq-navy);
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*--------------------------------------------------------------
+# Improved Section Spacing
+--------------------------------------------------------------*/
+#QuranCourses,
+#MonthlyFee,
+#OurTeachingMethod,
+#features,
+#testimonials,
+#contact {
+  padding: 90px 0;
+}
+
+@media (max-width: 991px) {
+  #QuranCourses,
+  #MonthlyFee,
+  #OurTeachingMethod,
+  #features,
+  #testimonials,
+  #contact {
+    padding: 70px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  #QuranCourses,
+  #MonthlyFee,
+  #OurTeachingMethod,
+  #features,
+  #testimonials,
+  #contact {
+    padding: 56px 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Better Navbar Mobile Experience
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
+  body.mobile-nav-open {
+    overflow: hidden;
+  }
+
+  .header {
+    padding: 12px 0;
+  }
+
+  .mobile-nav-toggle {
+    display: flex !important;
+    z-index: 1000;
+  }
+
+  .navbar {
+    position: static;
+    order: 1;
+    flex: 0 0 auto;
+  }
+
+  .header .logo {
+    order: 2;
+    margin-right: auto;
+  }
+
+  .navbar ul {
+    display: none !important;
+  }
+
+  .navbar.navbar-mobile {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(8, 44, 76, 0.62);
+  }
+
+  .navbar.navbar-mobile .mobile-nav-toggle {
+    position: fixed;
+    top: 12px;
+    right: 14px;
+    z-index: 1002 !important;
+    border-radius: 50%;
+    background: var(--hq-navy);
+    color: #ffffff;
+    box-shadow: 0 6px 18px rgba(8, 44, 76, 0.24);
+  }
+
+  .navbar.navbar-mobile > ul {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    width: min(88vw, 380px);
+    background: #fff;
+    border-radius: 0;
+    padding: 70px 0 18px;
+    overflow-y: auto;
+    z-index: 1000;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: -18px 0 42px rgba(8, 44, 76, 0.2);
+  }
+
+  .navbar.navbar-mobile > ul > li {
+    width: 100%;
+  }
+
+  .navbar.navbar-mobile a,
+  .navbar.navbar-mobile a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    font-size: 16px;
+    width: 100%;
+    border-bottom: 1px solid var(--hq-border);
+  }
+
+  .navbar.navbar-mobile .dropdown ul {
+    position: static;
+    display: none;
+    background: var(--hq-surface);
+    margin: 8px 16px;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  .navbar.navbar-mobile .dropdown ul.show {
+    display: block;
+  }
+
+  .navbar.navbar-mobile .dropdown > .dropdown-active {
+    display: block !important;
+  }
+
+  .navbar.navbar-mobile .dropdown > a::after {
+    display: none;
+  }
+
+  .navbar.navbar-mobile .dropdown > a.expanded > i {
+    transform: rotate(180deg);
+  }
+}
+
+/*--------------------------------------------------------------
+# Improved Pricing Cards
+--------------------------------------------------------------*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .plan-card {
+    margin-bottom: 24px;
+  }
+
+  .plan-price {
+    font-size: 2.5rem;
+  }
+}
+
+/*--------------------------------------------------------------
+# Better Testimonials
+--------------------------------------------------------------*/
+@media (max-width: 576px) {
+  .testimonials .testimonial-item {
+    padding: 24px 16px;
+    margin: 20px 10px;
+    min-height: auto;
+  }
+
+  .testimonials .testimonial-item .testimonial-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .testimonials .testimonial-item h3 {
+    font-size: 16px;
+  }
+
+  .testimonials .testimonial-item h4 {
+    font-size: 13px;
+  }
+
+  .testimonials .testimonial-item p {
+    font-size: 14px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Improved Contact Form
+--------------------------------------------------------------*/
+@media (max-width: 576px) {
+  .contact .row.gy-4 {
+    flex-direction: column;
+  }
+
+  .contact .info-box {
+    margin-bottom: 16px;
+  }
+
+  .contact .php-email-form {
+    padding: 20px;
+  }
+
+  .contact .php-email-form .row {
+    margin: 0;
+  }
+
+  .contact .php-email-form [class*="col-"] {
+    padding: 0;
+  }
+
+  .contact .php-email-form input,
+  .contact .php-email-form textarea {
+    margin-bottom: 16px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Improved Features Section
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
+  .features .row > div {
+    margin-bottom: 24px;
+  }
+
+  .features .feture-tabs .nav-pills {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--hq-border);
+  }
+
+  .features .feture-tabs .nav-pills .nav-link {
+    white-space: nowrap;
+    margin-right: 16px;
+    padding: 8px 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# Better Services Section
+--------------------------------------------------------------*/
+@media (max-width: 576px) {
+  .services .service-box {
+    padding: 32px 20px;
+  }
+
+  .services .service-box h3 {
+    font-size: 18px;
+  }
+
+  .services .service-box p {
+    font-size: 14px;
+  }
+
+  .services .service-box .icon {
+    padding: 30px 16px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Improved Footer/WhatsApp Button
+--------------------------------------------------------------*/
+@media (max-width: 576px) {
+  .back-to-top div:first-child,
+  .back-to-top div:last-child {
+    padding: 8px 12px;
+  }
+
+  .back-to-top i {
+    font-size: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Learning Environment Slider
+--------------------------------------------------------------*/
+@media (max-width: 576px) {
+  #learning-environment .testimonial-item {
+    padding: 8px;
+    min-height: auto;
+  }
+
+  #learning-environment .testimonial-item img {
+    width: 100%;
+    height: auto;
+    min-height: 200px;
+    object-fit: cover;
+  }
+}
+
+/*--------------------------------------------------------------
+# Payment Section
+--------------------------------------------------------------*/
+@media (max-width: 991px) {
+  #clients .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #clients .col-xl-4 {
+    margin-bottom: 30px;
+    width: 80%;
+  }
+
+  #clients .col-xl-8 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  #clients .col-xl-4 {
+    width: 100%;
+  }
+
+  #clients .icon-box h6,
+  #clients .icon-box h5 {
+    font-size: 14px;
+  }
+}
+
+/*--------------------------------------------------------------
+# No Horizontal Scroll Fix
+--------------------------------------------------------------*/
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
+
+/*--------------------------------------------------------------
+# Print Styles
+--------------------------------------------------------------*/
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+}
+
+/*--------------------------------------------------------------
+# Professional Button Styles
+--------------------------------------------------------------*/
+
+/* Base button styles */
+.btn,
+button,
+input[type="submit"],
+input[type="button"],
+.btn-register,
+.btn-get-started,
+.btn-read-more,
+.btn-extra-benefit,
+.courses .btn-extra-benefit,
+.course-card-actions .btn-extra-benefit,
+.country-button,
+.pricing .btn-buy,
+.contact .php-email-form button[type="submit"] {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Professional hover effects - Scale and shadow */
+.btn-register:hover,
+.btn-get-started:hover,
+.btn-read-more:hover,
+.btn-extra-benefit:hover,
+.courses .btn-extra-benefit:hover,
+.course-card-actions .btn-extra-benefit:hover,
+.contact .php-email-form button[type="submit"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Button background slide effect on hover */
+.btn-register::before,
+.btn-get-started::before,
+.btn-read-more::before,
+.course-card-actions .btn-benefits::before,
+.course-card-actions .btn-explore::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.btn-register:hover::before,
+.btn-get-started:hover::before,
+.btn-read-more:hover::before,
+.course-card-actions .btn-benefits:hover::before,
+.course-card-actions .btn-explore:hover::before {
+  left: 100%;
+}
+
+/* Country button professional hover */
+.country-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.country-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(19, 111, 67, 0.25) !important;
+}
+
+.country-button.active {
+  transform: none;
+}
+
+/* Service box buttons */
+.service-box {
+  transition: all 0.4s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(8, 44, 76, 0.15) !important;
+}
+
+.service-box:hover .icon {
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
+}
+
+/* Feature box hover */
+.features .feature-box {
+  transition: all 0.3s ease;
+}
+
+.features .feature-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(1, 41, 112, 0.12) !important;
+}
+
+.features .feature-box:hover i {
+  background: #E1B152 !important;
+  color: #fff !important;
+}
+
+/* Course card hover */
+.course-card {
+  transition: all 0.4s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(8, 44, 76, 0.12) !important;
+}
+
+/* Plan card hover */
+.plan-card {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.plan-card:hover {
+  transform: translateY(-8px) !important;
+  box-shadow: 0 25px 50px rgba(8, 44, 76, 0.15) !important;
+}
+
+/* Testimonial item hover */
+.testimonials .testimonial-item {
+  transition: all 0.4s ease;
+}
+
+.testimonials .testimonial-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(1, 41, 112, 0.15);
+}
+
+/* Info box hover */
+.contact .info-box {
+  transition: all 0.3s ease;
+}
+
+.contact .info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(8, 44, 76, 0.12);
+}
+
+.contact .info-box:hover i {
+  transform: scale(1.15);
+  transition: transform 0.3s ease;
+}
+
+/* WhatsApp and Back to top buttons */
+.back-to-top div:first-child a,
+.back-to-top div:last-child a {
+  transition: all 0.3s ease;
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top div:first-child,
+.back-to-top div:last-child {
+  padding: 6px !important;
+}
+
+.back-to-top i {
+  font-size: 20px;
+}
+
+.back-to-top div:first-child:hover,
+.back-to-top div:last-child:hover {
+  transform: scale(1.1);
+}
+
+.back-to-top div:first-child a:hover,
+.back-to-top div:last-child a:hover {
+  color: #fff !important;
+}
+
+/* Navigation link hover effect */
+.navbar a::after,
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 5px;
+  left: 50%;
+  background-color: #E1B152;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar a:hover::after,
+.navbar .nav-link:hover::after {
+  width: 60%;
+}
+
+.navbar a.active::after {
+  width: 60%;
+  background-color: #E1B152;
+}
+
+/* Dropdown hover effect */
+.navbar .dropdown > a::after {
+  transition: transform 0.3s ease;
+}
+
+.navbar .dropdown:hover > a::after {
+  transform: rotate(180deg);
+}
+
+/* Mobile nav link animation */
+@media (max-width: 991px) {
+  .navbar.navbar-mobile a::after,
+  .navbar.navbar-mobile .nav-link::after {
+    display: none;
+  }
+
+  .navbar.navbar-mobile a:active,
+  .navbar.navbar-mobile .nav-link:active {
+    background-color: rgba(225, 181, 82, 0.1);
+  }
+}
+
+/* Form button focus state */
+.contact .php-email-form button[type="submit"]:focus,
+.btn-register:focus,
+.btn-get-started:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(19, 111, 67, 0.25);
+}
+
+/* Swiper pagination bullets */
+.swiper-pagination .swiper-pagination-bullet {
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination .swiper-pagination-bullet:hover,
+.swiper-pagination .swiper-pagination-bullet-active {
+  transform: scale(1.3);
+  background: #E1B152 !important;
+  border-color: #E1B152 !important;
+}
+
+/* Learning environment slider images */
+#learning-environment {
+  background:
+    radial-gradient(circle at top left, rgba(225, 177, 82, 0.12), transparent 34%),
+    linear-gradient(180deg, #ffffff 0%, #f7faf8 100%);
+}
+
+#learning-environment .testimonials-slider {
+  padding: 10px 0 8px;
+}
+
+#learning-environment .swiper-slide {
+  padding: 12px;
+}
+
+#learning-environment .environment-card {
+  box-sizing: border-box;
+  min-height: 0;
+  margin: 0;
+  padding: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(166, 111, 20, 0.28);
+  border-radius: 18px;
+  background: linear-gradient(135deg, #ffffff 0%, #f7ecd3 100%);
+  box-shadow: 0 14px 34px rgba(8, 44, 76, 0.12);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+}
+
+#learning-environment .environment-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 13px;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+#learning-environment .environment-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(166, 111, 20, 0.62);
+  box-shadow: 0 22px 42px rgba(8, 44, 76, 0.18);
+}
+
+#learning-environment .environment-card:hover img {
+  transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+  #learning-environment .swiper-slide {
+    padding: 8px;
+  }
+
+  #learning-environment .environment-card {
+    padding: 5px;
+    border-radius: 14px;
+  }
+
+  #learning-environment .environment-card img {
+    min-height: 0;
+    border-radius: 10px;
+  }
+}
+
+/* Icon boxes in features */
+.icon-box {
+  transition: all 0.3s ease;
+}
+
+.icon-box:hover {
+  transform: translateX(5px);
+}
+
+.icon-box:hover i {
+  color: #E1B152 !important;
+  transform: scale(1.15);
+  transition: all 0.3s ease;
+}
+
+/*--------------------------------------------------------------
+# Cross-page responsive hardening
+--------------------------------------------------------------*/
+.header .container-fluid {
+  gap: 12px;
+}
+
+.header-register {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--hq-green);
+  color: #ffffff;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+  box-shadow: 0 8px 20px rgba(19, 111, 67, 0.2);
+}
+
+.header-register:hover,
+.header-register:focus {
+  background: var(--hq-navy);
+  color: #ffffff;
+}
+
+.info-box,
+.icon-box,
+.contact .info-box a,
+#clients h5,
+.footer,
+.footer a {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.blog .blog-comments .reply-form {
+  max-width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.blog .blog-comments .reply-form .form-group {
+  margin-bottom: 18px;
+}
+
+.blog .blog-comments .reply-form label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--hq-navy);
+  font-weight: 700;
+}
+
+.blog .blog-comments .reply-form input,
+.blog .blog-comments .reply-form select,
+.blog .blog-comments .reply-form textarea {
+  width: 100%;
+  min-height: 44px;
+}
+
+.blog .blog-comments .reply-form input[type="checkbox"] {
+  width: auto;
+  min-height: auto;
+}
+
+#days-container {
+  gap: 6px 0;
+}
+
+#days-container label {
+  min-height: 36px;
+  padding-right: 8px;
+  font-weight: 400;
+}
+
+@media (min-width: 1200px) {
+  .header-register {
+    margin-left: 12px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .header-register {
+    padding-right: 14px;
+    padding-left: 14px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .blog .blog-comments .reply-form {
+    padding: 28px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .blog .blog-comments .reply-form {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header .container-fluid {
+    justify-content: space-between !important;
+  }
+
+  .header-register {
+    order: 3;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .header .logo {
+    min-width: 0;
+    gap: 2px;
+  }
+
+  .header .logo img {
+    max-height: 36px;
+    margin-right: 2px;
+  }
+
+  .header .logo span {
+    display: inline;
+    max-width: none;
+    overflow: visible;
+    color: var(--hq-navy);
+    font-size: clamp(0.68rem, 3.2vw, 0.9rem);
+    letter-spacing: -0.03em;
+    text-overflow: clip;
+  }
+
+  .header-register {
+    min-height: 40px;
+    padding: 8px 8px;
+    font-size: 0.7rem;
+  }
+
+  .breadcrumbs h2 {
+    font-size: 1.5rem;
+  }
+
+  .blog .blog-comments .reply-form {
+    padding: 18px 14px;
+  }
+
+  .about > [data-aos] {
+    padding: 24px 16px !important;
+  }
+
+  .about .content p,
+  .about .content li {
+    font-size: 1rem !important;
+    line-height: 1.7;
+  }
+
+  #days-container label {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .sent-message {
+    width: calc(100vw - 32px);
+    max-width: 420px;
+    padding: 20px !important;
+  }
+}
+
+/* Client slider images */
+.clients .clients-slider .swiper-slide img {
+  transition: all 0.4s ease;
+  filter: grayscale(100%);
+  opacity: 0.6;
+}
+
+.clients .clients-slider .swiper-slide:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+/* Nav pill tabs in features */
+.features .feture-tabs .nav-link {
+  transition: all 0.3s ease;
+}
+
+.features .feture-tabs .nav-link:hover {
+  color: #E1B152;
+}
+
+.features .feture-tabs .nav-link.active {
+  transition: all 0.3s ease;
+}
+
+.features .feture-tabs .nav-link.active:hover {
+  color: #4154f1;
+}
+
+/* Accordion FAQ styles */
+.faq .accordion-button {
+  transition: all 0.3s ease;
+}
+
+.faq .accordion-button:not(.collapsed) {
+  color: #E1B152;
+}
+
+.faq .accordion-button:focus {
+  box-shadow: 0 0 0 3px rgba(225, 181, 82, 0.25);
+}
+
+/* Portfolio filter buttons */
+.portfolio #portfolio-flters li {
+  transition: all 0.3s ease;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #E1B152;
+  border-color: #E1B152;
+}
+
+/*--------------------------------------------------------------
+# Enhanced Button Colors
+--------------------------------------------------------------*/
+
+.btn-register {
+  background: linear-gradient(135deg, #136f43 0%, #0d5535 100%) !important;
+  color: #ffffff !important;
+}
+
+.btn-register:hover,
+.btn-register:focus,
+.btn-register:active {
+  background: linear-gradient(135deg, #0d5535 0%, #082c4c 100%) !important;
+  color: #ffffff !important;
+}
+
+.btn-get-started {
+  background: linear-gradient(135deg, #136f43 0%, #0d5535 100%) !important;
+  box-shadow: 0 10px 30px rgba(19, 111, 67, 0.35) !important;
+}
+
+.btn-get-started:hover {
+  background: linear-gradient(135deg, #0d5535 0%, #082c4c 100%) !important;
+  box-shadow: 0 15px 40px rgba(19, 111, 67, 0.45) !important;
+}
+
+.course-card-actions .btn-benefits {
+  background: linear-gradient(135deg, #a66f14 0%, #8a5a10 100%) !important;
+}
+
+.course-card-actions .btn-benefits:hover {
+  background: linear-gradient(135deg, #8a5a10 0%, #6b440c 100%) !important;
+}
+
+.course-card-actions .btn-explore {
+  background: linear-gradient(135deg, #0d4f8b 0%, #0a3d6e 100%) !important;
+}
+
+.course-card-actions .btn-explore:hover {
+  background: linear-gradient(135deg, #0a3d6e 0%, #082c4c 100%) !important;
+}
+
+.country-button {
+  background: #ffffff !important;
+  border: 2px solid #e3eadf !important;
+  color: #082c4c !important;
+}
+
+.country-button:hover,
+.country-button.active {
+  background: linear-gradient(135deg, #136f43 0%, #0d5535 100%) !important;
+  border-color: #136f43 !important;
+  color: #ffffff !important;
+}
+
+/* Contact form button */
+.contact .php-email-form button[type="submit"] {
+  background: linear-gradient(135deg, #136f43 0%, #0d5535 100%) !important;
+}
+
+.contact .php-email-form button[type="submit"]:hover {
+  background: linear-gradient(135deg, #082c4c 0%, #0d4f8b 100%) !important;
+}
