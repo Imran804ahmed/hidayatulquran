@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -56,12 +56,12 @@
           <li><a href="index.html#MonthlyFee">Monthly Fee</a></li>
           <li class="dropdown"><a href="#" aria-haspopup="true" aria-expanded="false"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="index.html#EnrollmentProcess">Enrollment Process</a></li>
+              <li><a href="enrollment-process.html">Enrollment Process</a></li>
               <li class="dropdown"><a href="#" aria-haspopup="true" aria-expanded="false"><span>Specialities</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="index.html#features">Why Choose</a></li>
                   <li><a href="index.html#OurTeachingMethod">Our Teaching Method</a></li>
-                  <li><a href="index.html#EmpoweringStudents">Empowering Students</a></li>
+                  <li><a href="empowering-through-quranic-learning.html">Empowering Students</a></li>
                 </ul>
               </li>
               <li><a href="faq.html">F.A.Q</a></li>
@@ -451,86 +451,129 @@
                 <link rel="stylesheet"
                   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-                <div class="sent-message"
-                  style="position: fixed; bottom: 20%; left: 50%; transform: translate(-50%, -50%); display:none; flex-direction: column; color: #fff; background: #18d26e; text-align: center; padding: 30px 30px; font-weight: 600; align-items: center; border-radius: 10px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease;">
-                  <div>
-                    <i class="fas fa-check-circle"
-                      style="font-size: 30px; margin-bottom: 20px; animation: bounce 1s infinite;"></i>
-                  </div>
-                  <div>
-                    <span style="font-size: 16px; font-family: 'Arial', sans-serif; letter-spacing: 1px;">Success
-                      message</span>
-                  </div>
-                </div>
-
-
-                <style>
-                  @keyframes bounce {
-
-                    0%,
-                    100% {
-                      transform: translateY(0);
-                    }
-
-                    50% {
-                      transform: translateY(-15px);
-                    }
-                  }
-                </style>
-
-
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" id="reg-submit-btn" class="btn btn-primary" style="min-width:160px; position:relative;">
+                  <span id="reg-btn-text">Register</span>
+                  <span id="reg-btn-loader" style="display:none; align-items:center; gap:8px; justify-content:center;">
+                    <svg width="18" height="18" viewBox="0 0 38 38" stroke="#fff" style="animation:rSpin 0.8s linear infinite; flex-shrink:0;">
+                      <g fill="none"><g transform="translate(1 1)" stroke-width="3">
+                        <circle stroke-opacity=".35" cx="18" cy="18" r="18"/>
+                        <path d="M36 18c0-9.94-8.06-18-18-18"/>
+                      </g></g>
+                    </svg>
+                    Submitting...
+                  </span>
+                </button>
               </form>
 
-              <!-- Success Message
-              <div class="sent-message" style="display:flex;  color: #fff; background: #18d26e; text-align: center; padding: 15px; margin-top: 24px; margin-bottom: 24px; font-weight: 600;"></div> -->
+              <!-- Loader Overlay -->
+              <div id="reg-loader" style="display:none; position:fixed; inset:0; z-index:9998; background:rgba(10,18,40,0.68); backdrop-filter:blur(5px); -webkit-backdrop-filter:blur(5px); justify-content:center; align-items:center; flex-direction:column;">
+                <div style="width:66px; height:66px; border:5px solid rgba(255,255,255,0.18); border-top-color:#18d26e; border-radius:50%; animation:rSpin 0.85s linear infinite;"></div>
+                <p style="color:#fff; margin-top:22px; font-size:16px; font-weight:600; letter-spacing:1px; opacity:0.92; font-family:'Poppins',sans-serif;">Submitting your registration…</p>
+              </div>
+
+              <!-- Success Popup -->
+              <div id="reg-success" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(10,18,40,0.68); backdrop-filter:blur(5px); -webkit-backdrop-filter:blur(5px); justify-content:center; align-items:center;" role="dialog" aria-modal="true" aria-labelledby="rs-title">
+                <div style="background:#fff; border-radius:24px; padding:48px 40px 40px; max-width:420px; width:90%; text-align:center; box-shadow:0 30px 70px rgba(0,0,0,0.28); animation:rPopIn 0.42s cubic-bezier(.175,.885,.32,1.275) both;">
+
+                  <!-- Checkmark circle -->
+                  <div style="width:84px; height:84px; background:linear-gradient(135deg,#18d26e 0%,#0ea84f 100%); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 26px; box-shadow:0 10px 28px rgba(24,210,110,0.42); animation:rCheckPop 0.45s 0.18s cubic-bezier(.175,.885,.32,1.275) both;">
+                    <svg width="42" height="42" viewBox="0 0 52 52" fill="none" aria-hidden="true">
+                      <path d="M14 27l8 8 16-16" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-dasharray="42" stroke-dashoffset="42"
+                        style="animation:rDraw 0.45s 0.45s ease forwards;"/>
+                    </svg>
+                  </div>
+
+                  <h3 id="rs-title" style="color:#0d1f3c; font-size:26px; font-weight:700; margin-bottom:10px; font-family:'Poppins',sans-serif;">Registration Submitted!</h3>
+                  <p id="rs-msg" style="color:#5a6a85; font-size:15px; line-height:1.7; margin-bottom:28px; font-family:'Poppins',sans-serif;">Thank you for registering. We have received your details and will contact you shortly.</p>
+
+                  <!-- Auto-dismiss progress bar -->
+                  <div style="background:#eef2f7; border-radius:999px; height:5px; overflow:hidden; margin-bottom:28px;">
+                    <div id="rs-bar" style="height:100%; background:linear-gradient(90deg,#18d26e,#0ea84f); border-radius:999px; width:100%; animation:rBar 5s linear forwards;"></div>
+                  </div>
+
+                  <button onclick="closeRegSuccess()"
+                    style="background:linear-gradient(135deg,#18d26e,#0ea84f); color:#fff; border:none; border-radius:14px; padding:13px 44px; font-size:15px; font-weight:600; cursor:pointer; box-shadow:0 5px 18px rgba(24,210,110,0.38); transition:transform 0.15s,box-shadow 0.15s; font-family:'Poppins',sans-serif;"
+                    onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 24px rgba(24,210,110,0.52)'"
+                    onmouseout="this.style.transform='';this.style.boxShadow='0 5px 18px rgba(24,210,110,0.38)'">
+                    Done
+                  </button>
+                </div>
+              </div>
+
+              <style>
+                @keyframes rSpin     { to { transform: rotate(360deg); } }
+                @keyframes rPopIn    { from { opacity:0; transform:scale(0.82) translateY(24px); } to { opacity:1; transform:scale(1) translateY(0); } }
+                @keyframes rCheckPop { from { transform:scale(0); opacity:0; } to { transform:scale(1); opacity:1; } }
+                @keyframes rDraw     { to { stroke-dashoffset: 0; } }
+                @keyframes rBar      { from { width:100%; } to { width:0%; } }
+              </style>
 
               <script>
-                const form = document.querySelector('.php-email-form');
-                const sentMessage = document.querySelector('.sent-message');
+                (function () {
+                  const form       = document.querySelector('.php-email-form');
+                  const loader     = document.getElementById('reg-loader');
+                  const successBox = document.getElementById('reg-success');
+                  const submitBtn  = document.getElementById('reg-submit-btn');
+                  const btnText    = document.getElementById('reg-btn-text');
+                  const btnSpinner = document.getElementById('reg-btn-loader');
+                  let autoClose    = null;
 
-                form.addEventListener('submit', function (e) {
-                  e.preventDefault();
+                  window.closeRegSuccess = function () {
+                    successBox.style.display = 'none';
+                    clearTimeout(autoClose);
+                  };
 
-                  // Check for checkbox agreement
-                  if (!document.getElementById('agree').checked) {
-                    alert("You must agree to the terms & conditions.");
-                    return;
+                  function showLoader() {
+                    loader.style.display = 'flex';
+                    submitBtn.disabled = true;
+                    btnText.style.display = 'none';
+                    btnSpinner.style.display = 'flex';
                   }
 
-                  sentMessage.style.display = 'none';  // Hide success message before submit
+                  function hideLoader() {
+                    loader.style.display = 'none';
+                    submitBtn.disabled = false;
+                    btnText.style.display = '';
+                    btnSpinner.style.display = 'none';
+                  }
 
-                  const formData = new FormData(form);
+                  function showSuccess(msg) {
+                    document.getElementById('rs-msg').textContent = msg;
+                    const bar = document.getElementById('rs-bar');
+                    bar.style.animation = 'none';
+                    bar.offsetHeight;
+                    bar.style.animation = 'rBar 5s linear forwards';
+                    successBox.style.display = 'flex';
+                    autoClose = setTimeout(closeRegSuccess, 5000);
+                  }
 
-                  fetch(form.action, {
-                    method: 'POST',
-                    body: formData
-                  })
-                    .then(response => response.json())
-                    .then(data => {
-                      if (data.success) {
-                        // Set the response message from API
-                        sentMessage.querySelector('span').textContent = data.message;
-                        sentMessage.style.display = 'block';  // Show success message
-                        form.reset();
+                  form.addEventListener('submit', function (e) {
+                    e.preventDefault();
 
-                        // Remove the success message after 2 seconds
-                        setTimeout(() => {
-                          sentMessage.style.display = 'none';
-                        }, 2000);  // 2 seconds in milliseconds
+                    if (!document.getElementById('agree').checked) {
+                      alert("You must agree to the terms & conditions.");
+                      return;
+                    }
 
+                    showLoader();
+                    setPackageFieldsDisabled(false);
+
+                    fetch(form.action, { method: 'POST', body: new FormData(form) })
+                      .then(r => r.json())
+                      .then(data => {
+                        hideLoader();
                         setPackageFieldsDisabled(Boolean(selectedPlan));
-                      } else {
-                        alert(data.message);
+                        if (data.success) { form.reset(); showSuccess(data.message); }
+                        else { alert(data.message); }
+                      })
+                      .catch(() => {
+                        hideLoader();
                         setPackageFieldsDisabled(Boolean(selectedPlan));
-                      }
-                    })
-                    .catch(() => {
-                      alert('Something went wrong. Please try again.');
-                      setPackageFieldsDisabled(Boolean(selectedPlan));
-                    });
-
-                });
+                        alert('Something went wrong. Please try again.');
+                      });
+                  });
+                })();
               </script>
 
             </div>
@@ -569,7 +612,7 @@
 
     <div
       style="background-color: #169344; margin-bottom: 15px; padding: 10px; border-top-right-radius: 10px; border-top-left-radius: 0px;">
-      <a href="https://wa.me/923365398542" target="_blank">
+      <a href="https://wa.me/923365398542?text=Assalamu%20Alaikum%2C%20I%20want%20to%20book%20a%20free%20trial%20Quran%20class." target="_blank">
         <i class="bi bi-whatsapp"></i>
       </a>
     </div>

@@ -1,14 +1,23 @@
 <?php
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
 header('Content-Type: application/json');
 
 // Get form data
-$fullName = strtoupper($_POST['fullName'] ?? ''); // Convert fullName to uppercase
-$email    = $_POST['email'] ?? '';
-$subject  = $_POST['subject'] ?? '';
-$message  = $_POST['message'] ?? '';
+$fullName = strtoupper(trim($_POST['fullName'] ?? ''));
+$email    = trim($_POST['email'] ?? '');
+$subject  = trim($_POST['subject'] ?? '');
+$message  = trim($_POST['message'] ?? '');
+
+// Validate required fields
+if (!$fullName || !$email || !$subject || !$message) {
+    echo json_encode(['success' => false, 'message' => 'All fields are required.']);
+    exit;
+}
+
+// Validate email to prevent header injection
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo json_encode(['success' => false, 'message' => 'Invalid email address.']);
+    exit;
+}
 
 $conn = new mysqli('localhost', 'u970626337_root', 'FILm0q|V', 'u970626337_hidayatulquran');
 
@@ -16,22 +25,6 @@ if ($conn->connect_error) {
     echo json_encode([
         'success' => false,
         'message' => 'Database connection failed'
-    ]);
-    exit;
-}
-
-// Check if the email already exists in the database
-$emailCheck = $conn->prepare("SELECT COUNT(*) FROM contactus WHERE email = ?");
-$emailCheck->bind_param("s", $email);
-$emailCheck->execute();
-$emailCheck->bind_result($emailCount);
-$emailCheck->fetch();
-$emailCheck->close();
-
-if ($emailCount > 0) {
-    echo json_encode([
-        'success' => false,
-        'message' => 'The email address is already in use. Please use a different email.'
     ]);
     exit;
 }
@@ -54,16 +47,20 @@ if ($stmt->execute()) {
     // Send email to the user
     $to = $email;
     $emailSubject = "Thank you for contacting us";
+    $safeName    = htmlspecialchars($fullName,  ENT_QUOTES, 'UTF-8');
+    $safeSubject = htmlspecialchars($subject,   ENT_QUOTES, 'UTF-8');
+    $safeMessage = htmlspecialchars($message,   ENT_QUOTES, 'UTF-8');
+
     $emailMessage = "
     <html>
     <head>
         <title>Thank you for contacting us</title>
     </head>
     <body>
-        <p>DEAR $fullName,</p>
+        <p>DEAR $safeName,</p>
         <p>Thank you for reaching out to us. We have successfully received your message with the following details:</p>
-        <p><strong>Subject:</strong> $subject</p>
-        <p><strong>Message:</strong> $message</p>
+        <p><strong>Subject:</strong> $safeSubject</p>
+        <p><strong>Message:</strong> $safeMessage</p>
         <p>Our team is currently reviewing your message, and we will get back to you shortly. If you need any further assistance in the meantime, feel free to reply to this email.</p>
         <p>Best regards,</p>
         <p><strong>Hidayat Ul Quran</strong></p>
@@ -89,18 +86,12 @@ if ($stmt->execute()) {
     $headers .= "From: info@hidayatulquran.com\r\n";
     $headers .= "Reply-To: info@hidayatulquran.com\r\n";
 
-    // Check if the email was sent successfully
-    if (mail($to, $emailSubject, $emailMessage, $headers)) {
-        echo json_encode([
-            'success' => true,
-            'message' => 'Your message has been sent. Thank you!'
-        ]);
-    } else {
-        echo json_encode([
-            'success' => false,
-            'message' => 'Failed to send email.'
-        ]);
-    }
+    mail($to, $emailSubject, $emailMessage, $headers);
+
+    echo json_encode([
+        'success' => true,
+        'message' => 'Your message has been sent. Thank you!'
+    ]);
 } else {
     echo json_encode([
         'success' => false,

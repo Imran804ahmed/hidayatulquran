@@ -5,16 +5,18 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>About - HidayatulQuran Academy</title>
-  <meta name="description"
-    content="Hidayatul Quran is an online Quran academy offering Quranic education to students worldwide, including the USA, UK, KSA, Germany, Canada, and AED. Learn Quran, Tajweed, and Islamic studies from qualified teachers at your convenience.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <meta name="keywords"
-    content="online Quran academy, Quran education, learn Quran, Tajweed, Quran classes, Quranic studies, Hidayatul Quran, Quran lessons, Quran online, Islamic studies, USA, UK, KSA, Germany, Canada, AEDExpert Tutors, Personalized Attention, Student Progress Monitoring, Structured Learning Material, Flexible Class Scheduling, Monthly Progress Reports, 24/7 Availability, Reasonable Price, Noorani Qaida, Quran Reading Course, Quran with Tajweed, Quran Memorization, Tafseer e Quran Course, Quranic Arabic Course">
+  <title>About HidayatulQuran Academy — Certified Online Quran Tutors</title>
+  <meta name="description"
+    content="Learn about HidayatulQuran Academy — a trusted online Quran academy with certified male and female tutors offering 1-on-1 live Quran classes for kids and adults worldwide.">
+  <link rel="canonical" href="https://hidayatulquran.com/about.html">
+  <meta name="robots" content="index, follow">
 
   <!-- Favicons -->
-  <link href="assets/img/hidayatulquran1.png" rel="icon" alt="hidayatulquran1">
-  <link href="assets/img/hidayatulquran1.png" rel="apple-touch-icon" alt="hidayatulquran1">
+  <link href="assets/img/hidayatulquran1.png" rel="icon" type="image/png">
+  <link href="assets/img/hidayatulquran1.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link
@@ -32,12 +34,283 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css?v=20260530-12" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: FlexStart - v1.4.0
-  * Template URL: https://bootstrapmade.com/flexstart-bootstrap-startup-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    /* ---- Hero ---- */
+    .about-hero {
+      background: linear-gradient(135deg, #082c4c 0%, #0d4a7a 50%, #082c4c 100%);
+      padding: 90px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .about-hero h1 {
+      color: #E1B152;
+      font-size: 2.6rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .about-hero p {
+      color: #b8cfe0;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* ---- About Story ---- */
+    .about-story {
+      padding: 80px 0;
+      background: #fff;
+    }
+    .about-story .section-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #E1B152;
+      margin-bottom: 8px;
+    }
+    .about-story h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #082c4c;
+      margin-bottom: 16px;
+    }
+    .about-story .lead-text {
+      font-size: 1.05rem;
+      color: #444;
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .about-story .logo-card {
+      background: linear-gradient(135deg, #082c4c 0%, #0d4a7a 100%);
+      border-radius: 24px;
+      padding: 50px 30px;
+      text-align: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 40px rgba(8,44,76,0.25);
+    }
+    .about-story .logo-card img {
+      width: 130px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    }
+    .about-story .logo-card h3 {
+      color: #E1B152;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .about-story .logo-card p {
+      color: #b8cfe0;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    .about-story .logo-card .divider {
+      width: 50px;
+      height: 3px;
+      background: #E1B152;
+      border-radius: 2px;
+      margin: 14px auto;
+    }
+
+    /* ---- Stats ---- */
+    .stats-section {
+      background: linear-gradient(135deg, #082c4c 0%, #0d4a7a 100%);
+      padding: 60px 0;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 20px 10px;
+    }
+    .stat-item .stat-number {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #E1B152;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-item .stat-label {
+      color: #b8cfe0;
+      font-size: 0.95rem;
+      font-weight: 500;
+    }
+    .stat-divider {
+      width: 1px;
+      background: rgba(255,255,255,0.15);
+      align-self: stretch;
+    }
+
+    /* ---- Why Choose ---- */
+    .why-section {
+      background: #f4f7fb;
+      padding: 80px 0;
+    }
+    .why-section .section-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #E1B152;
+      margin-bottom: 8px;
+    }
+    .why-section h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #082c4c;
+      margin-bottom: 8px;
+    }
+    .why-section .subtitle {
+      color: #6c757d;
+      max-width: 520px;
+      margin: 0 auto 50px;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px 24px;
+      height: 100%;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-bottom: 4px solid transparent;
+    }
+    .feature-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.13);
+      border-bottom-color: #E1B152;
+    }
+    .feature-card .icon-wrap {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, #082c4c, #0d4a7a);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #E1B152;
+      margin-bottom: 18px;
+    }
+    .feature-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #082c4c;
+      margin-bottom: 10px;
+    }
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* ---- Mission ---- */
+    .mission-section {
+      padding: 80px 0;
+      background: #fff;
+    }
+    .mission-card {
+      background: linear-gradient(135deg, #082c4c 0%, #0d4a7a 100%);
+      border-radius: 24px;
+      padding: 50px 50px;
+      position: relative;
+      overflow: hidden;
+    }
+    .mission-card::before {
+      content: "\F4CA";
+      font-family: "bootstrap-icons";
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      font-size: 8rem;
+      color: rgba(255,255,255,0.05);
+      line-height: 1;
+    }
+    .mission-card .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #E1B152;
+      margin-bottom: 10px;
+    }
+    .mission-card h2 {
+      font-size: 1.9rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    .mission-card p {
+      color: #b8cfe0;
+      font-size: 1rem;
+      line-height: 1.85;
+      margin: 0;
+      max-width: 700px;
+    }
+    .mission-card .mission-values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .mission-card .mission-values span {
+      background: rgba(225,177,82,0.15);
+      border: 1px solid rgba(225,177,82,0.35);
+      color: #E1B152;
+      border-radius: 30px;
+      padding: 6px 18px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* ---- CTA Strip ---- */
+    .cta-strip {
+      background: linear-gradient(135deg, #082c4c 0%, #0d4a7a 100%);
+      padding: 60px 0;
+      text-align: center;
+    }
+    .cta-strip h2 {
+      color: #E1B152;
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .cta-strip p {
+      color: #b8cfe0;
+      font-size: 1rem;
+      margin-bottom: 28px;
+    }
+    .btn-wa {
+      background: #25d366;
+      color: #fff;
+      font-weight: 600;
+      padding: 13px 32px;
+      border-radius: 50px;
+      font-size: 1rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+    }
+    .btn-wa:hover {
+      background: #1da851;
+      transform: translateY(-2px);
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
@@ -56,19 +329,19 @@
           <li><a href="index.html#MonthlyFee">Monthly Fee</a></li>
           <li class="dropdown"><a href="#" aria-haspopup="true" aria-expanded="false"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="index.html#EnrollmentProcess">Enrollment Process</a></li>
+              <li><a href="enrollment-process.html">Enrollment Process</a></li>
               <li class="dropdown"><a href="#" aria-haspopup="true" aria-expanded="false"><span>Specialities</span> <i class="bi bi-chevron-right"></i></a>
                 <ul>
                   <li><a href="index.html#features">Why Choose</a></li>
                   <li><a href="index.html#OurTeachingMethod">Our Teaching Method</a></li>
-                  <li><a href="index.html#EmpoweringStudents">Empowering Students</a></li>
+                  <li><a href="empowering-through-quranic-learning.html">Empowering Students</a></li>
                 </ul>
               </li>
               <li><a href="faq.html">F.A.Q</a></li>
             </ul>
           </li>
           <li><a href="socialPlatforms.html">Social Platform</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a class="active" href="about.html">About</a></li>
           <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <button class="mobile-nav-toggle bi bi-list" type="button" aria-label="Open navigation menu"
@@ -80,101 +353,144 @@
 
   <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs" style="margin-top: 70px;">
+    <!-- ======= Hero Banner ======= -->
+    <section class="about-hero" style="margin-top: 70px;">
       <div class="container">
-
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>About</li>
-        </ol>
-        <h2><strong>About</strong></h2>
-
+        <h1 data-aos="fade-down">About HidayatulQuran Academy</h1>
+        <p data-aos="fade-up" data-aos-delay="100">A trusted online Quran academy connecting students worldwide with certified, experienced tutors — one class at a time.</p>
       </div>
-    </section><!-- End Breadcrumbs -->
+    </section>
 
+    <!-- ======= About Story ======= -->
+    <section class="about-story">
+      <div class="container">
+        <div class="row align-items-center g-5">
 
+          <div class="col-lg-7" data-aos="fade-right">
+            <p class="section-label">Who We Are</p>
+            <h2>Hidaya Tul Quran — Online Quran Academy</h2>
+            <p class="lead-text">
+              <strong>Hidaya-tul-Quran Academy</strong> is a trusted <strong>online Quran academy</strong> providing
+              professional Quran learning services for students worldwide. Whether you are searching for a
+              <strong>Quran teacher online</strong> or want to <strong>learn Quran with Tajweed</strong> from the
+              comfort of your home, we offer structured and personalised learning programs for all ages.
+            </p>
+            <p class="lead-text">
+              Our academy connects students with experienced, qualified Quran tutors through live 1-on-1 online classes.
+              Whether you are a complete beginner or looking to refine your recitation, we help you achieve fluency in
+              reading the Holy Quran with proper pronunciation and Tajweed rules.
+            </p>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+              <a href="registration.html" class="btn-wa" style="background: #082c4c; box-shadow: 0 4px 20px rgba(8,44,76,0.3);">
+                <i class="bi bi-pencil-square"></i> Register Now
+              </a>
+              <a href="https://wa.me/923365398542?text=Assalamu%20Alaikum%2C%20I%20want%20to%20book%20a%20free%20trial%20Quran%20class."
+                target="_blank" rel="noopener noreferrer" class="btn-wa">
+                <i class="bi bi-whatsapp" style="font-size: 1.1rem;"></i> Free Trial Class
+              </a>
+            </div>
+          </div>
 
-    <section id="about" class="about" style=" padding: 0px; ">
-
-      <div data-aos="fade-up" style="width: 100%; padding: 50px; ">
-        <header class="section-header" style=" padding-bottom: 30px;">
-          <h3 style="color: #E1B152;">Online Quran Academy</h3>
-            <p>Hidaya Tul Quran</p>
-        </header>
-
-
-        <div class="content" style="width: 100%; margin: 0px;">
-
-          <!-- Intro with keywords -->
-          <p style="font-size: 20px;">
-            <strong>Hidaya-tul-Quran Academy</strong> is a trusted <strong>online Quran academy</strong> providing
-            professional Quran learning services for students worldwide. If you are searching for a
-            <strong>Quran teacher online</strong> or want to <strong>learn Quran with Tajweed</strong> from the comfort
-            of your home, we offer structured and personalized learning programs for all ages.
-            <br><br>
-            Our academy connects students with experienced and qualified Quran tutors through live online classes.
-            Whether you are a beginner or want to improve your recitation, we help you achieve fluency in reading
-            the Holy Quran with proper pronunciation and Tajweed rules.
-          </p>
-
-          <br>
-
-          <!-- H2 for SEO -->
-          <h2 style="font-size: 26px;">Why Choose Our Online Quran Academy?</h2>
-
-          <ul style="font-size: 18px; margin: 15px;">
-            <li>
-              <strong>Certified Quran Teachers:</strong> Our tutors are highly qualified, Hafiz-e-Quran, and
-              Tajweed-certified with years of teaching experience.
-            </li>
-            <li>
-              <strong>One-to-One Online Quran Classes:</strong> Personalized sessions ensure better understanding
-              and faster learning for each student.
-            </li>
-            <li>
-              <strong>Learn Quran with Tajweed:</strong> We focus on correct pronunciation (Makharij) and proper
-              Tajweed rules to improve recitation.
-            </li>
-            <li>
-              <strong>Courses for Kids and Adults:</strong>
-              <ul>
-                <li>Quran reading for beginners</li>
-                <li>Quran recitation with Tajweed</li>
-                <li>Islamic studies for kids</li>
-                <li>Courses for new Muslims</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Flexible Timings:</strong> Classes are available according to USA, UK, Canada, UAE, and
-              worldwide time zones.
-            </li>
-            <li>
-              <strong>Free Trial Class:</strong> Join a free trial session and experience our teaching quality
-              before enrollment.
-            </li>
-            <li>
-              <strong>Progress Tracking:</strong> Regular assessments and feedback ensure continuous improvement.
-            </li>
-          </ul>
-
-          <br>
-
-          <!-- H2 additional section -->
-          <h2 style="font-size: 26px;">Our Mission</h2>
-          <p style="font-size: 18px;">
-            Our mission is to make <strong>Quran learning online</strong> accessible, easy, and effective for
-            students around the world. We aim to provide high-quality Islamic education that helps individuals
-            understand and recite the Holy Quran correctly with Tajweed.
-          </p>
+          <div class="col-lg-5" data-aos="fade-left" data-aos-delay="100">
+            <div class="logo-card">
+              <img src="assets/img/hidayatulquran1.png" alt="HidayatulQuran Academy Logo">
+              <div class="divider"></div>
+              <h3>HidayatulQuran</h3>
+              <p>Online Quran Academy<br>Serving students worldwide since day one</p>
+            </div>
+          </div>
 
         </div>
       </div>
+    </section>
 
+    <!-- ======= Why Choose Us ======= -->
+    <section class="why-section">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <p class="section-label">Our Advantages</p>
+          <h2>Why Choose Our Online Quran Academy?</h2>
+          <p class="subtitle">We combine qualified teaching, flexible scheduling, and personalised attention to make Quran learning effective for everyone.</p>
+        </div>
+
+        <div class="row g-4">
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-card">
+              <div class="icon-wrap"><i class="bi bi-patch-check-fill"></i></div>
+              <h4>Certified Quran Teachers</h4>
+              <p>Our tutors are Hafiz-e-Quran and Tajweed-certified with years of professional teaching experience.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="feature-card">
+              <div class="icon-wrap"><i class="bi bi-person-lines-fill"></i></div>
+              <h4>One-to-One Live Classes</h4>
+              <p>Personalised 1-on-1 sessions ensure better understanding and faster progress for every student.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-card">
+              <div class="icon-wrap"><i class="bi bi-book-fill"></i></div>
+              <h4>Learn Quran with Tajweed</h4>
+              <p>Focus on correct Makharij (pronunciation) and proper Tajweed rules to perfect your recitation.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+            <div class="feature-card">
+              <div class="icon-wrap"><i class="bi bi-people-fill"></i></div>
+              <h4>Courses for All Ages</h4>
+              <p>Programs for kids, adults, and new Muslims — Quran reading, Tajweed, Hifz, Tafseer, and Arabic.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-card">
+              <div class="icon-wrap"><i class="bi bi-clock-fill"></i></div>
+              <h4>Flexible Timings</h4>
+              <p>Classes available across USA, UK, Canada, UAE, and all major time zones — at your convenience.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350">
+            <div class="feature-card">
+              <div class="icon-wrap"><i class="bi bi-graph-up"></i></div>
+              <h4>Progress Tracking</h4>
+              <p>Regular assessments, feedback, and monthly reports ensure continuous and measurable improvement.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Mission ======= -->
+    <section class="mission-section">
+      <div class="container" data-aos="fade-up">
+        <div class="mission-card">
+          <p class="section-label">Our Purpose</p>
+          <h2>Our Mission</h2>
+          <p>
+            Our mission is to make <strong style="color:#E1B152;">Quran learning online</strong> accessible, easy, and
+            effective for students around the world. We aim to provide high-quality Islamic education that helps
+            individuals understand and recite the Holy Quran correctly with Tajweed — empowering every Muslim to
+            build a stronger connection with the Book of Allah from the comfort of their home.
+          </p>
+          <div class="mission-values">
+            <span><i class="bi bi-check-circle me-1"></i>Accessibility</span>
+            <span><i class="bi bi-check-circle me-1"></i>Quality Education</span>
+            <span><i class="bi bi-check-circle me-1"></i>Certified Tutors</span>
+            <span><i class="bi bi-check-circle me-1"></i>Global Reach</span>
+            <span><i class="bi bi-check-circle me-1"></i>Free Trial Class</span>
+          </div>
+        </div>
+      </div>
     </section>
 
   </main><!-- End #main -->
-
 
 
   <div class="back-to-top d-flex align-items-center"
@@ -182,13 +498,13 @@
 
     <div
       style="background-color: #169344; margin-bottom: 15px; padding: 10px; border-top-right-radius: 10px; border-top-left-radius: 0px;">
-      <a href="https://wa.me/923365398542" target="_blank">
+      <a href="https://wa.me/923365398542?text=Assalamu%20Alaikum%2C%20I%20want%20to%20book%20a%20free%20trial%20Quran%20class." target="_blank">
         <i class="bi bi-whatsapp"></i>
       </a>
     </div>
 
     <div
-      style="background-color: #3b51e0; margin-bottom: 0px; padding: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 0px; ">
+      style="background-color: #3b51e0; margin-bottom: 0px; padding: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 0px;">
       <a href="#">
         <i class="bi bi-arrow-up-short"></i>
       </a>
