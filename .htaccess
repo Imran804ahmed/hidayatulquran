@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# Redirect non-www to www
+RewriteCond %{HTTP_HOST} ^hidayatulquran\.com$ [NC]
+RewriteRule ^(.*)$ https://www.hidayatulquran.com/$1 [R=301,L]
+
+# Redirect /index.html to root
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ https://www.hidayatulquran.com/ [R=301,L]

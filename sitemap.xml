@@ -2,80 +2,94 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://hidayatulquran.com/</loc>
+    <loc>https://www.hidayatulquran.com/</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://hidayatulquran.com/noorani-qaida-online.html</loc>
+    <loc>https://www.hidayatulquran.com/noorani-qaida-online.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hidayatulquran.com/quran-reading-course-online.html</loc>
+    <loc>https://www.hidayatulquran.com/quran-reading-course-online.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hidayatulquran.com/quran-tajweed-course-online.html</loc>
+    <loc>https://www.hidayatulquran.com/quran-tajweed-course-online.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hidayatulquran.com/quran-memorization-hifz-online.html</loc>
+    <loc>https://www.hidayatulquran.com/quran-memorization-hifz-online.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hidayatulquran.com/tafseer-quran-course-online.html</loc>
+    <loc>https://www.hidayatulquran.com/tafseer-quran-course-online.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hidayatulquran.com/quranic-arabic-course-online.html</loc>
+    <loc>https://www.hidayatulquran.com/quranic-arabic-course-online.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hidayatulquran.com/about.html</loc>
+    <loc>https://www.hidayatulquran.com/about.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://hidayatulquran.com/faq.html</loc>
+    <loc>https://www.hidayatulquran.com/faq.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://hidayatulquran.com/registration.html</loc>
+    <loc>https://www.hidayatulquran.com/registration.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://hidayatulquran.com/socialPlatforms.html</loc>
+    <loc>https://www.hidayatulquran.com/socialPlatforms.html</loc>
     <lastmod>2026-06-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hidayatulquran.com/enrollment-process.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.hidayatulquran.com/empowering-through-quranic-learning.html</loc>
+    <lastmod>2026-06-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>

@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /blog.html
+Disallow: /inner-page.html
+Disallow: /portfolio-details.html
+Disallow: /Explore.html
 
-Sitemap: https://hidayatulquran.com/sitemap.xml
+Sitemap: https://www.hidayatulquran.com/sitemap.xml
